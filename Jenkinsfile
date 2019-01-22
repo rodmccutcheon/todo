@@ -25,16 +25,6 @@ pipeline {
 //        }
 //    }
     stages {
-        stage('Copy Archive') {
-            steps {
-                script {
-                    step ([$class: 'CopyArtifact',
-                           projectName: 'Create_archive',
-                           filter: "packages/infra*.zip",
-                           target: 'Infra']);
-                }
-            }
-        }
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
