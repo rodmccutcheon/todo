@@ -5,12 +5,12 @@ pipeline {
             args '-v /root/.m2:/root/.m2'
         }
     }
-    triggers {
-        cron('H H(13-16) * * *')
-    }
-    tools {
-        maven 'apache-maven-3.5.4'
-    }
+//    triggers {
+//        cron('H H(13-16) * * *')
+//    }
+//    tools {
+//        maven 'apache-maven-3.5.4'
+//    }
 //    pre {
 //        always {
 //            cleanWs()
