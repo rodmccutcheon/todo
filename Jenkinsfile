@@ -17,7 +17,7 @@ pipeline {
             }
             post {
                 always {
-                    junit 'tellus-web/target/surefire-reports/*.xml'
+                    junit 'todo-web/target/surefire-reports/*.xml'
                 }
             }
         }
