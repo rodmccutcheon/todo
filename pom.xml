@@ -15,9 +15,9 @@
 
     <modules>
         <module>todo-web</module>
-        <module>todo-data</module>
+        <!-- <module>todo-data</module>
         <module>todo-ingestion</module>
-        <module>todo-query</module>
+        <module>todo-query</module> -->
         <module>todo-test</module>
     </modules>
 
