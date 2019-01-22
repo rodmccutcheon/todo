@@ -20,6 +20,7 @@ import org.springframework.web.context.WebApplicationContext;
 
 import javax.annotation.PostConstruct;
 
+import static org.junit.Assert.fail;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -68,6 +69,11 @@ public class TodoControllerTest {
         String url = OBJECT_MAPPER.readValue(result.getResponse().getContentAsByteArray(), SavedEntity.class).getUrl();
         mockMvc.perform(get(url))
                 .andExpect(status().isOk());
+    }
+    
+    @Test
+    public void testFailure() {
+        fail();
     }
 
 }
