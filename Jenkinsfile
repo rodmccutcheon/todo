@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'maven:3.6.1-jdk-8-alpine'
-            label 'codebuilder'
+            label 'codebuild'
             args '-v /root/.m2:/root/.m2'
         }
     }
